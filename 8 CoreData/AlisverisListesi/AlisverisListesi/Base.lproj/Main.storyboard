@@ -48,28 +48,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zzk-iC-po6">
-                                <rect key="frame" x="20" y="110" width="374" height="209"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gorselsec" translatesAutoresizingMaskIntoConstraints="NO" id="zzk-iC-po6">
+                                <rect key="frame" x="20" y="110" width="374" height="195"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün İsmi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYE-ge-4oI">
-                                <rect key="frame" x="20" y="355" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün Fiyatı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G49-Pu-dhU">
-                                <rect key="frame" x="20" y="411" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün Bedeni" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4RB-OJ-GS5">
-                                <rect key="frame" x="20" y="466" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDR-kJ-W35">
-                                <rect key="frame" x="152" y="537" width="111" height="64"/>
+                                <rect key="frame" x="152" y="460" width="111" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="Rka-be-bbt"/>
+                                    <constraint firstAttribute="height" constant="64" id="mco-gz-TzC"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Kaydet"/>
@@ -77,26 +62,50 @@
                                     <action selector="kaydetButtonTiklandi:" destination="DV1-8t-EUv" eventType="touchUpInside" id="T5k-0T-f3J"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün İsmi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYE-ge-4oI">
+                                <rect key="frame" x="20" y="334" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="CPu-8L-cuA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün Fiyatı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G49-Pu-dhU">
+                                <rect key="frame" x="20" y="376" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="hIW-XF-lxo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün Bedeni" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4RB-OJ-GS5">
+                                <rect key="frame" x="20" y="418" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="hKG-cP-rKc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sL4-Io-rE9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GYE-ge-4oI" firstAttribute="leading" secondItem="G49-Pu-dhU" secondAttribute="leading" id="1qK-3r-HBE"/>
-                            <constraint firstItem="GYE-ge-4oI" firstAttribute="trailing" secondItem="G49-Pu-dhU" secondAttribute="trailing" id="7RA-bn-wvh"/>
-                            <constraint firstItem="zzk-iC-po6" firstAttribute="leading" secondItem="GYE-ge-4oI" secondAttribute="leading" id="8ut-p9-RZw"/>
-                            <constraint firstItem="zzk-iC-po6" firstAttribute="trailing" secondItem="GYE-ge-4oI" secondAttribute="trailing" id="AgU-Pq-gNl"/>
-                            <constraint firstItem="G49-Pu-dhU" firstAttribute="leading" secondItem="4RB-OJ-GS5" secondAttribute="leading" id="AqY-A2-ciW"/>
-                            <constraint firstItem="4RB-OJ-GS5" firstAttribute="top" secondItem="G49-Pu-dhU" secondAttribute="bottom" constant="21" id="IvH-k1-IaU"/>
-                            <constraint firstItem="zzk-iC-po6" firstAttribute="trailing" secondItem="WrO-ub-jPG" secondAttribute="trailingMargin" id="JRU-HA-iq6"/>
-                            <constraint firstItem="nDR-kJ-W35" firstAttribute="top" secondItem="4RB-OJ-GS5" secondAttribute="bottom" constant="37" id="Nym-oy-FZD"/>
-                            <constraint firstItem="GYE-ge-4oI" firstAttribute="top" secondItem="zzk-iC-po6" secondAttribute="bottom" constant="36" id="Q4y-Xe-yR7"/>
-                            <constraint firstItem="G49-Pu-dhU" firstAttribute="top" secondItem="GYE-ge-4oI" secondAttribute="bottom" constant="22" id="Xy2-24-KKa"/>
-                            <constraint firstItem="nDR-kJ-W35" firstAttribute="leading" secondItem="sL4-Io-rE9" secondAttribute="leading" constant="152" id="aWc-Wj-iC6"/>
-                            <constraint firstItem="4RB-OJ-GS5" firstAttribute="centerX" secondItem="nDR-kJ-W35" secondAttribute="centerX" id="bLv-2J-QSQ"/>
-                            <constraint firstItem="zzk-iC-po6" firstAttribute="leading" secondItem="WrO-ub-jPG" secondAttribute="leadingMargin" id="bQv-lL-J6B"/>
-                            <constraint firstItem="sL4-Io-rE9" firstAttribute="bottom" secondItem="nDR-kJ-W35" secondAttribute="bottom" constant="261" id="gBj-Eh-Neg"/>
-                            <constraint firstItem="zzk-iC-po6" firstAttribute="top" secondItem="sL4-Io-rE9" secondAttribute="top" constant="22" id="iwG-NK-aQQ"/>
-                            <constraint firstItem="G49-Pu-dhU" firstAttribute="trailing" secondItem="4RB-OJ-GS5" secondAttribute="trailing" id="qj9-Gz-w33"/>
+                            <constraint firstItem="zzk-iC-po6" firstAttribute="leading" secondItem="WrO-ub-jPG" secondAttribute="leadingMargin" id="2aq-iW-rS6"/>
+                            <constraint firstItem="nDR-kJ-W35" firstAttribute="leading" secondItem="sL4-Io-rE9" secondAttribute="leading" constant="152" id="73Q-ei-MzC"/>
+                            <constraint firstItem="4RB-OJ-GS5" firstAttribute="top" secondItem="G49-Pu-dhU" secondAttribute="bottom" constant="8" id="FKL-Tp-F2E"/>
+                            <constraint firstItem="sL4-Io-rE9" firstAttribute="bottom" secondItem="nDR-kJ-W35" secondAttribute="bottom" constant="338" id="GsQ-b0-E7T"/>
+                            <constraint firstItem="GYE-ge-4oI" firstAttribute="trailing" secondItem="G49-Pu-dhU" secondAttribute="trailing" id="HHv-T4-LiG"/>
+                            <constraint firstItem="zzk-iC-po6" firstAttribute="leading" secondItem="GYE-ge-4oI" secondAttribute="leading" id="MCK-gl-L0H"/>
+                            <constraint firstItem="zzk-iC-po6" firstAttribute="top" secondItem="sL4-Io-rE9" secondAttribute="top" constant="22" id="P1q-VS-PsU"/>
+                            <constraint firstItem="G49-Pu-dhU" firstAttribute="top" secondItem="GYE-ge-4oI" secondAttribute="bottom" constant="8" id="dFn-1W-ZDN"/>
+                            <constraint firstItem="G49-Pu-dhU" firstAttribute="leading" secondItem="4RB-OJ-GS5" secondAttribute="leading" id="h60-NS-5KR"/>
+                            <constraint firstItem="nDR-kJ-W35" firstAttribute="top" secondItem="4RB-OJ-GS5" secondAttribute="bottom" constant="8" id="kPN-8N-Umy"/>
+                            <constraint firstItem="GYE-ge-4oI" firstAttribute="leading" secondItem="G49-Pu-dhU" secondAttribute="leading" id="kZs-Ks-IaX"/>
+                            <constraint firstItem="zzk-iC-po6" firstAttribute="trailing" secondItem="WrO-ub-jPG" secondAttribute="trailingMargin" id="l0B-1B-uOJ"/>
+                            <constraint firstItem="G49-Pu-dhU" firstAttribute="trailing" secondItem="4RB-OJ-GS5" secondAttribute="trailing" id="nqR-mL-761"/>
+                            <constraint firstItem="GYE-ge-4oI" firstAttribute="top" secondItem="zzk-iC-po6" secondAttribute="bottom" constant="29" id="pDO-BD-tv1"/>
+                            <constraint firstItem="4RB-OJ-GS5" firstAttribute="centerX" secondItem="nDR-kJ-W35" secondAttribute="centerX" id="sX2-4o-9p4"/>
+                            <constraint firstItem="zzk-iC-po6" firstAttribute="trailing" secondItem="GYE-ge-4oI" secondAttribute="trailing" id="uKD-jd-EdY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g3d-hN-BK3"/>
@@ -109,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uf-qW-acj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1443" y="-50"/>
+            <point key="canvasLocation" x="1442.0289855072465" y="-50.223214285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nup-wN-gKQ">
@@ -131,6 +140,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gorselsec" width="721" height="521"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
