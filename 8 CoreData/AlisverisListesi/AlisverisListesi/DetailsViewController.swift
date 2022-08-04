@@ -10,6 +10,7 @@ import CoreData
 
 class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var kaydetButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var isimTextField: UITextField!
     @IBOutlet weak var fiyatTextField: UITextField!
@@ -22,6 +23,9 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         
         if secilenUrunIsmi != "" {
+            
+            kaydetButton.isHidden = true
+            
             //CoreData seçilen ürün bilgilerini göster
             if let uuidString = secilenUrunUUID?.uuidString {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -60,6 +64,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
             }
         } else {
+            kaydetButton.isHidden = false
+            kaydetButton.isEnabled = false
             isimTextField.text = ""
             fiyatTextField.text = ""
             bedenTextField.text = ""
@@ -85,6 +91,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage] as? UIImage
+        kaydetButton.isEnabled = true
         self.dismiss(animated: true, completion: nil)
     }
     
