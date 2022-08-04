@@ -96,5 +96,47 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let contex = appDelegate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Alisveris")
+            let uuidString = idDizisi[indexPath.row].uuidString
+            
+            fetchRequest.predicate = NSPredicate(format: "id = %@", uuidString)
+            fetchRequest.returnsObjectsAsFaults = false
+            
+            do {
+                let sonuclar = try contex.fetch(fetchRequest)
+                if sonuclar.count > 0 {
+                    for sonuc in sonuclar as! [NSManagedObject] {
+                        if let id = sonuc.value(forKey: "id") as? UUID {
+                            if id == idDizisi[indexPath.row] {
+                                contex.delete(sonuc)
+                                isimDizisi.remove(at: indexPath.row)
+                                idDizisi.remove(at: indexPath.row)
+                                
+                                self.tableView.reloadData()
+                                
+                                do {
+                                    try contex.save()
+                                } catch {
+                                    
+                                }
+                                
+                                break
+                                
+                            }
+                        }
+                    }
+                }
+            } catch {
+                print("hata")
+            }
+            
+        }
+    }
+    
 }
 
