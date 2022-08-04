@@ -15,8 +15,22 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var fiyatTextField: UITextField!
     @IBOutlet weak var bedenTextField: UITextField!
     
+    var secilenUrunIsmi = ""
+    var secilenUrunUUID : UUID?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if secilenUrunIsmi != "" {
+            //CoreData seçilen ürün bilgilerini göster
+            if let uuidString = secilenUrunUUID?.uuidString {
+                print(uuidString)
+            }
+        } else {
+            isimTextField.text = ""
+            fiyatTextField.text = ""
+            bedenTextField.text = ""
+        }
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(klavyeyiKapat))
         view.addGestureRecognizer(gestureRecognizer)
