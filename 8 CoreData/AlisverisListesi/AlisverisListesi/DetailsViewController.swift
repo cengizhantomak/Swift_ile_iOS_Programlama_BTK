@@ -71,8 +71,6 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         } catch {
             print("hata var")
         }
-        
-        
     }
     
     /*
