@@ -16,8 +16,15 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(klavyeyiKapat))
+        view.addGestureRecognizer(gestureRecognizer)
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func klavyeyiKapat() {
+        view.endEditing(true)
     }
     
     @IBAction func kaydetButtonTiklandi(_ sender: Any) {
