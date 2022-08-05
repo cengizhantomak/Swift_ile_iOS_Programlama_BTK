@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -16,6 +17,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager()
+    var secilenLatitude = Double()
+    var secilenLongitude = Double()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             let dokunulanNokta = gestureRecognizer.location(in: mapView)
             let dokunulanKoordinat = mapView.convert(dokunulanNokta, toCoordinateFrom: mapView)
             
+            secilenLatitude = dokunulanKoordinat.latitude
+            secilenLongitude = dokunulanKoordinat.longitude
+            
             let annotation = MKPointAnnotation()
             annotation.coordinate = dokunulanKoordinat
             annotation.title = isimTextField.text
@@ -55,6 +61,26 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.setRegion(region, animated: true)
     }
 
-
+    @IBAction func kaydetTiklandi(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let yeniYer = NSEntityDescription.insertNewObject(forEntityName: "Yer", into: context)
+        
+        yeniYer.setValue(isimTextField.text, forKey: "isim")
+        yeniYer.setValue(notTextField.text, forKey: "not")
+        yeniYer.setValue(secilenLatitude, forKey: "latitude")
+        yeniYer.setValue(secilenLongitude, forKey: "longitude")
+        yeniYer.setValue(UUID(), forKey: "id")
+        
+        do {
+            try context.save()
+            print("kayıt edildi")
+        } catch {
+            print("hata")
+        }
+        
+    }
+    
 }
 

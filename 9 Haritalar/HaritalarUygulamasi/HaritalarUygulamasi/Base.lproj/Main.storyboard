@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JDs-t2-Cm7">
-                                <rect key="frame" x="0.0" y="165" width="414" height="697"/>
+                                <rect key="frame" x="0.0" y="165" width="414" height="642"/>
                             </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="İsim Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCh-GR-OTZ">
                                 <rect key="frame" x="20" y="71" width="374" height="34"/>
@@ -29,20 +29,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35e-X6-Wtu">
+                                <rect key="frame" x="155" y="822" width="105" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Kaydet"/>
+                                <connections>
+                                    <action selector="kaydetTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vEt-j8-aWt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hMr-bY-58w" firstAttribute="centerX" secondItem="JDs-t2-Cm7" secondAttribute="centerX" id="9Fk-mY-BSu"/>
-                            <constraint firstItem="JDs-t2-Cm7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IHg-dU-ppC"/>
-                            <constraint firstItem="hMr-bY-58w" firstAttribute="top" secondItem="lCh-GR-OTZ" secondAttribute="bottom" constant="8" id="JqZ-5C-3mu"/>
-                            <constraint firstItem="lCh-GR-OTZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KVB-o2-aPZ"/>
-                            <constraint firstItem="lCh-GR-OTZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PAr-E6-PPA"/>
-                            <constraint firstItem="JDs-t2-Cm7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WSh-ht-ogY"/>
-                            <constraint firstItem="lCh-GR-OTZ" firstAttribute="leading" secondItem="hMr-bY-58w" secondAttribute="leading" id="rIw-rF-fge"/>
-                            <constraint firstItem="lCh-GR-OTZ" firstAttribute="trailing" secondItem="hMr-bY-58w" secondAttribute="trailing" id="sP0-4g-H4s"/>
-                            <constraint firstItem="lCh-GR-OTZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="uqb-WK-ybO"/>
-                            <constraint firstItem="JDs-t2-Cm7" firstAttribute="top" secondItem="hMr-bY-58w" secondAttribute="bottom" constant="18" id="vbL-bW-IQY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="35e-X6-Wtu" secondAttribute="bottom" constant="9" id="859-xN-XJ0"/>
+                            <constraint firstItem="JDs-t2-Cm7" firstAttribute="centerX" secondItem="35e-X6-Wtu" secondAttribute="centerX" id="9ZL-Hq-LrD"/>
+                            <constraint firstItem="35e-X6-Wtu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="DDz-vG-3Jy"/>
+                            <constraint firstItem="JDs-t2-Cm7" firstAttribute="top" secondItem="hMr-bY-58w" secondAttribute="bottom" constant="18" id="ECI-4Y-sx6"/>
+                            <constraint firstItem="35e-X6-Wtu" firstAttribute="top" secondItem="JDs-t2-Cm7" secondAttribute="bottom" constant="15" id="GRI-Nm-E5W"/>
+                            <constraint firstItem="lCh-GR-OTZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="GRa-No-IBw"/>
+                            <constraint firstItem="lCh-GR-OTZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JdN-bz-I15"/>
+                            <constraint firstItem="lCh-GR-OTZ" firstAttribute="leading" secondItem="hMr-bY-58w" secondAttribute="leading" id="Uq9-Rw-4It"/>
+                            <constraint firstItem="hMr-bY-58w" firstAttribute="centerX" secondItem="JDs-t2-Cm7" secondAttribute="centerX" id="bcl-ne-LOT"/>
+                            <constraint firstItem="lCh-GR-OTZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="epv-HN-BUM"/>
+                            <constraint firstItem="lCh-GR-OTZ" firstAttribute="trailing" secondItem="hMr-bY-58w" secondAttribute="trailing" id="fRG-Wh-n6E"/>
+                            <constraint firstItem="hMr-bY-58w" firstAttribute="top" secondItem="lCh-GR-OTZ" secondAttribute="bottom" constant="8" id="gNA-CV-zQH"/>
+                            <constraint firstItem="JDs-t2-Cm7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zrC-Xj-6ms"/>
                         </constraints>
                     </view>
                     <connections>
