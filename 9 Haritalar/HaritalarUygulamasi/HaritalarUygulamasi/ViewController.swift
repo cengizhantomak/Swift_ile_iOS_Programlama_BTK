@@ -11,7 +11,10 @@ import CoreLocation
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
+    @IBOutlet weak var isimTextField: UITextField!
+    @IBOutlet weak var notTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
+    
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -36,8 +39,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             
             let annotation = MKPointAnnotation()
             annotation.coordinate = dokunulanKoordinat
-            annotation.title = "Kullanıcı Seçimi"
-            annotation.subtitle = "Örnek Altyazı"
+            annotation.title = isimTextField.text
+            annotation.subtitle = notTextField.text
             mapView.addAnnotation(annotation)
         }
     }
