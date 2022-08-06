@@ -93,14 +93,38 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                             }
                         }
                     }
-                } catch {
                     
+                } catch {
+                    print("hata")
                 }
-                
             }
+            
         } else {
             //yeni veri eklemeye geldi
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let reuseId = "benimAnnotation"
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+        
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView?.canShowCallout = true
+            pinView?.tintColor = .red
+            
+            let button = UIButton(type: .detailDisclosure)
+            pinView?.rightCalloutAccessoryView = button
+            
+        } else {
+            pinView?.annotation = annotation
+        }
+        
+        return pinView
         
     }
     
@@ -149,9 +173,13 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         do {
             try context.save()
             print("kayıt edildi")
+            
         } catch {
             print("hata")
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name("yeniYerOlusturuldu"), object: nil)
+        navigationController?.popViewController(animated: true)
         
     }
     
