@@ -23,6 +23,12 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     var secilenIsim = ""
     var secilenId : UUID?
     
+    var annotationTitle = ""
+    var annotationSubtitle = ""
+    var annotationLatitude = Double()
+    var annotationLongitude = Double()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -41,7 +47,50 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             //CoreData'dan verileri çek
             
             if let uuidString = secilenId?.uuidString {
-                print(uuidString)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let context = appDelegate.persistentContainer.viewContext
+                
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Yer")
+                fetchRequest.predicate = NSPredicate(format: "id = %@", uuidString)
+                fetchRequest.returnsObjectsAsFaults = false
+                
+                do {
+                    let sonuclar = try context.fetch(fetchRequest)
+                    
+                    if sonuclar.count > 0 {
+                        
+                        for sonuc in sonuclar as! [NSManagedObject] {
+                            if let isim = sonuc.value(forKey: "isim") as? String {
+                                annotationTitle = isim
+                                
+                                if let not = sonuc.value(forKey: "not") as? String {
+                                    annotationSubtitle = not
+                                    
+                                    if let latitude = sonuc.value(forKey: "latitude") as? Double {
+                                        annotationLatitude = latitude
+                                        
+                                        if let longitude = sonuc.value(forKey: "longitude") as? Double {
+                                            annotationLongitude = longitude
+                                            
+                                            let annotation = MKPointAnnotation()
+                                            annotation.title = annotationTitle
+                                            annotation.subtitle = annotationSubtitle
+                                            let coordinate = CLLocationCoordinate2D(latitude: annotationLatitude, longitude: annotationLongitude)
+                                            annotation.coordinate = coordinate
+                                            
+                                            mapView.addAnnotation(annotation)
+                                            isimTextField.text = annotationTitle
+                                            notTextField.text = annotationSubtitle
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } catch {
+                    
+                }
+                
             }
         } else {
             //yeni veri eklemeye geldi
