@@ -20,6 +20,9 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     var secilenLatitude = Double()
     var secilenLongitude = Double()
     
+    var secilenIsim = ""
+    var secilenId : UUID?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,6 +35,17 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(konumSec(gestureRecognizer:)))
         gestureRecognizer.minimumPressDuration = 3
         mapView.addGestureRecognizer(gestureRecognizer)
+        
+        
+        if secilenIsim != "" {
+            //CoreData'dan verileri çek
+            
+            if let uuidString = secilenId?.uuidString {
+                print(uuidString)
+            }
+        } else {
+            //yeni veri eklemeye geldi
+        }
         
     }
     
