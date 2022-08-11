@@ -81,21 +81,74 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                                             mapView.addAnnotation(annotation)
                                             isimTextField.text = annotationTitle
                                             notTextField.text = annotationSubtitle
+                                            
+                                            locationManager.stopUpdatingLocation()
+                                            
+                                            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+                                            let region = MKCoordinateRegion(center: coordinate, span: span)
+                                            mapView.setRegion(region, animated: true)
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                } catch {
                     
+                } catch {
+                    print("hata")
                 }
-                
             }
+            
         } else {
             //yeni veri eklemeye geldi
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
         
+        let reuseId = "benimAnnotation"
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+        
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView?.canShowCallout = true
+            pinView?.tintColor = .red
+            
+            let button = UIButton(type: .detailDisclosure)
+            pinView?.rightCalloutAccessoryView = button
+            
+        } else {
+            pinView?.annotation = annotation
+        }
+        
+        return pinView
+        
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if secilenIsim != "" {
+            
+            let requestLocation = CLLocation(latitude: annotationLatitude, longitude: annotationLongitude)
+            
+            CLGeocoder().reverseGeocodeLocation(requestLocation) { placemarkDizisi, hata in
+                if let placemarks = placemarkDizisi {
+                    if placemarks.count > 0 {
+                        let yeniPlacemark = MKPlacemark(placemark: placemarks[0])
+                        let item = MKMapItem(placemark: yeniPlacemark)
+                        item.name = self.annotationTitle
+                        
+                        let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+                        item.openInMaps(launchOptions: launchOptions)
+                        
+                    }
+                }
+                
+            }
+            
+        }
     }
     
     @objc func konumSec(gestureRecognizer : UILongPressGestureRecognizer) {
@@ -117,11 +170,15 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         //print(locations[0].coordinate.latitude)
         //print(locations[0].coordinate.longitude)
-        let location = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
+        if secilenIsim == "" {
+            let location = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
+            
+            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            let region = MKCoordinateRegion(center: location, span: span)
+            mapView.setRegion(region, animated: true)
+        }
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        let region = MKCoordinateRegion(center: location, span: span)
-        mapView.setRegion(region, animated: true)
+        
     }
 
     @IBAction func kaydetTiklandi(_ sender: Any) {
@@ -139,9 +196,13 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         do {
             try context.save()
             print("kayıt edildi")
+            
         } catch {
             print("hata")
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name("yeniYerOlusturuldu"), object: nil)
+        navigationController?.popViewController(animated: true)
         
     }
     
