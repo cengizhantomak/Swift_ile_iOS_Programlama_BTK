@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 10 Firebase/FotografPaylasmaUygulamasi/FotografPaylasmaUygulamasi.xcodeproj/project.pbxproj
 10 Firebase/FotografPaylasmaUygulamasi/FotografPaylasmaUygulamasi.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 10 Firebase/FotografPaylasmaUygulamasi/FotografPaylasmaUygulamasi.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
@@ -16,6 +17,11 @@
 10 Firebase/FotografPaylasmaUygulamasi/FotografPaylasmaUygulamasi/Info.plist
 10 Firebase/FotografPaylasmaUygulamasi/FotografPaylasmaUygulamasi/SceneDelegate.swift
 10 Firebase/FotografPaylasmaUygulamasi/FotografPaylasmaUygulamasi/ViewController.swift
+=======
+10 Firebase/FotografPaylasmaUygulamasi/FotografPaylasmaUygulamasi.xcworkspace/contents.xcworkspacedata
+10 Firebase/FotografPaylasmaUygulamasi/FotografPaylasmaUygulamasi.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+10 Firebase/FotografPaylasmaUygulamasi/FotografPaylasmaUygulamasi.xcworkspace/xcuserdata/tunatomak.xcuserdatad/UserInterfaceState.xcuserstate
+>>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
 10 Firebase/FotografPaylasmaUygulamasi/Podfile
 10 Firebase/FotografPaylasmaUygulamasi/Podfile.lock
 10 Firebase/FotografPaylasmaUygulamasi/Pods/abseil/absl/algorithm/algorithm.h
@@ -5171,3 +5177,7 @@
 10 Firebase/FotografPaylasmaUygulamasi/Pods/Target Support Files/SDWebImage/SDWebImage.modulemap
 10 Firebase/FotografPaylasmaUygulamasi/Pods/Target Support Files/SDWebImage/SDWebImage.release.xcconfig
 10 Firebase/FotografPaylasmaUygulamasi/FotografPaylasmaUygulamasi/GoogleService-Info.plist
+<<<<<<< HEAD
+=======
+10 Firebase/FotografPaylasmaUygulamasi/FotografPaylasmaUygulamasi/GoogleService-Info.plist
+>>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
