@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21204"/>
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
-    <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
->>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,11 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndk-LP-OaB">
-<<<<<<< HEAD
                                 <rect key="frame" x="20" y="228" width="374" height="34"/>
-=======
-                                <rect key="frame" x="20" y="208" width="374" height="34"/>
->>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="eLP-vU-Mec"/>
                                 </constraints>
@@ -37,11 +26,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="şifre giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xiR-BE-UFf">
-<<<<<<< HEAD
                                 <rect key="frame" x="20" y="290" width="374" height="34"/>
-=======
-                                <rect key="frame" x="20" y="270" width="374" height="34"/>
->>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="zqa-YE-a9k"/>
                                 </constraints>
@@ -49,21 +34,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotoğraf Paylaşma Uygulaması" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-Co-6Dq">
-<<<<<<< HEAD
                                 <rect key="frame" x="20" y="106" width="374" height="78"/>
-=======
-                                <rect key="frame" x="20" y="102" width="374" height="62"/>
->>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S72-p0-ahl">
-<<<<<<< HEAD
                                 <rect key="frame" x="59" y="378" width="91" height="11"/>
-=======
-                                <rect key="frame" x="59" y="358" width="81" height="31"/>
->>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Giriş Yap"/>
                                 <connections>
@@ -71,11 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htm-th-JQB">
-<<<<<<< HEAD
                                 <rect key="frame" x="261.5" y="366" width="82.5" height="34.5"/>
-=======
-                                <rect key="frame" x="270" y="358" width="74" height="31"/>
->>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Kayıt Ol"/>
                                 <connections>
@@ -122,11 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gorselsec" translatesAutoresizingMaskIntoConstraints="NO" id="ywn-vs-66g">
-<<<<<<< HEAD
                                 <rect key="frame" x="20" y="88" width="374" height="290"/>
-=======
-                                <rect key="frame" x="20" y="84" width="374" height="294"/>
->>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yorum yazınız" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHl-Wj-jWe">
                                 <rect key="frame" x="20" y="407" width="374" height="34"/>
@@ -182,11 +151,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rX-9v-006">
-<<<<<<< HEAD
                                 <rect key="frame" x="160.5" y="431" width="93.5" height="34.5"/>
-=======
-                                <rect key="frame" x="165.5" y="432.5" width="83" height="31"/>
->>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Çıkış Yap"/>
                                 <connections>
@@ -219,19 +184,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="e3T-dA-5wr">
-<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="48" width="414" height="765"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="348" id="KuF-9J-OOU" customClass="FeedCell" customModule="FotografPaylasmaUygulamasi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="348"/>
-=======
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="348" id="KuF-9J-OOU" customClass="FeedCell" customModule="FotografPaylasmaUygulamasi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="348"/>
->>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KuF-9J-OOU" id="rz3-1w-x4a">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="348"/>
@@ -327,13 +284,8 @@
     <resources>
         <image name="gorselsec" width="721" height="521"/>
         <image name="mosaic.fill" catalog="system" width="128" height="114"/>
-<<<<<<< HEAD
         <image name="seal.fill" catalog="system" width="128" height="124"/>
         <image name="sun.min.fill" catalog="system" width="128" height="123"/>
-=======
-        <image name="seal.fill" catalog="system" width="128" height="128"/>
-        <image name="sun.min.fill" catalog="system" width="128" height="121"/>
->>>>>>> 0dcf33253ef53c723ae8432df797bdb3cbf897a5
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
